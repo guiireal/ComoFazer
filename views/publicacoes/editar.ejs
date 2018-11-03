@@ -1,0 +1,15 @@
+<%- include('../header') %>
+
+<form method="POST" action="/publicacoes/editar/<%= categoria %>/<%= publicacao.id %>">
+    <div class="form-group">
+        <label for="titulo">Título</label>
+        <input type="text" class="form-control" id="titulo" placeholder="Título da Publicação" name="titulo" value="<%= publicacao.titulo %>">
+    </div>
+    <div class="form-group">
+        <label for="conteudo">Conteúdo</label>
+        <textarea class="form-control" id="conteudo" placeholder="Digite o Conteúdo" name="conteudo"><%= publicacao.conteudo %></textarea> 
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
+<%- include('../footer') %>
